@@ -25,20 +25,24 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/checkout@v3
+      - name: Check out the default branch
+        uses: actions/checkout@v3
+      - name: Check out 'data' branch # dataブランチの内容を dataディレクトリに配置
+        uses: actions/checkout@v3
         with:
-          path: data
-          ref: data
+          path: data # Relative path under $GITHUB_WORKSPACE to place the repository
+          ref: data # The branch, tag or SHA to checkout
         continue-on-error: true
-      - uses: r7kamura/gialog-sync@v1
+      - name: Generate issue files in "data/issues/{issue index}/"
+        uses: r7kamura/gialog-sync@v1 # https://github.com/r7kamura/gialog-sync
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: peaceiris/actions-gh-pages@v3
+      - name: Commit and push "data"
+        uses: peaceiris/actions-gh-pages@v3 # https://github.com/peaceiris/actions-gh-pages
         with:
           destination_dir: .
           disable_nojekyll: true
-          force_orphan: true
+          force_orphan: true # This allows you to make your publish branch with only the latest commit.
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: data
           publish_dir: data
@@ -52,3 +56,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: out
+          #  The default of "publish_branch" is "gh-pages"
