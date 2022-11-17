@@ -56,6 +56,64 @@ const Home: NextPage<Props> = () => {
           PCとインターネット環境があれば物理的距離の問題こそ解消されますが、開発者同士の心理的距離が埋まらなければアイデアは生まれず開発は始まりません。LAIMEでは一度知り合った人とは連絡をとり続け、いつか誰かが新しいことを始めるときに他の誰かにすぐサポートを頼めるような人的ネットワークを作ることを目指します。
         </Typography>
       </SectionBox>
+
+      <SectionBox>
+        <Typography variant="h3" component="h2">
+          実績
+        </Typography>
+        <ul>
+          <li>Kaggle 累計メダル獲得 金2, 銀27, 銅24</li>
+          <li>
+            <a href="https://www.kaggle.com/c/birdclef-2021">
+              Kaggle BirdCLEF 2021 - Birdcall Identification
+            </a>
+            にチームで参加し優勝
+            <ul>
+              <li>
+                <a href="https://speakerdeck.com/startjapan/birdclef2021matome">
+                  コンペに関するまとめ資料
+                </a>
+              </li>
+              <li>
+                <a href="https://qiita.com/kami634/items/36fb395c21fb6f5919b9">
+                  優勝解法の記事
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </SectionBox>
+
+      <SectionBox>
+        <Typography variant="h3" component="h2">
+          メンバー
+        </Typography>
+        <Typography>
+          活動はほとんどオンラインのため、全国の様々な学生が在籍しています。
+        </Typography>
+        <Typography>
+          現在のメンバーは、東大・東工大を始めとした情報系学生に加えて、医学部の学生など合わせて20名以上おり、Kaggleや競技プログラミングなどで優秀な成績を収めた学生も多数在籍しています。
+        </Typography>
+        <ul>
+          <li>Kaggle Competition Master 2名在籍</li>
+          <li>Red Coder 1名在籍</li>
+        </ul>
+      </SectionBox>
+
+      <SectionBox>
+        <Typography variant="h3" component="h2">
+          スポンサー
+        </Typography>
+        <Typography>
+          スポンサーとして賞金などの後方支援を株式会社MNESが行っています。
+        </Typography>
+        <Typography>
+          医療と現代技術の関わりが少ない今日、医療系学生と情報系学生のコミュニティがその発展につながることを期待しています。
+        </Typography>
+        <Typography>
+          スポンサー：<a href="https://mnes.life/">株式会社エムネス</a>
+        </Typography>
+      </SectionBox>
     </section>
   );
 };

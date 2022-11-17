@@ -41,10 +41,11 @@ const About = () => {
         <Typography></Typography>
         <br />
         <Typography>
-          勉強会の資料例：
+          勉強会の資料例 (コンペサイト：
           <a href="https://www.kaggle.com/c/shopee-product-matching">
             Shopee - Price Match Guarantee
-          </a>
+          </a>{" "}
+          )
         </Typography>
         <iframe
           src="https://docs.google.com/presentation/d/e/2PACX-1vQdgXhpaco5raXF4-vd_ucsCv7euNgpAvfU7ZVQa8jgrSSU8i2iilBm37Ga15c50g/embed?start=false&amp;loop=false&amp;delayms=3000"
