@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       <Container maxWidth="lg">
-        <Header title={siteTitle} sections={sections} />
+        <Header sections={sections} />
         <main>
           <Grid container spacing={5} sx={{ mt: 3 }}>
             <Grid item xs={12} md={8}>

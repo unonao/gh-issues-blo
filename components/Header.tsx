@@ -3,17 +3,18 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
+import Logo from "./Logo";
+
 interface HeaderProps {
   sections: ReadonlyArray<{
     title: string;
     url: string;
   }>;
-  title: string;
+  title?: string;
 }
 
 export default function Header(props: HeaderProps) {
   const { sections, title } = props;
-
   return (
     <React.Fragment>
       <Toolbar sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -25,7 +26,7 @@ export default function Header(props: HeaderProps) {
           noWrap
           sx={{ flex: 1 }}
         >
-          {title}
+          {title ? title : <Logo />}
         </Typography>
       </Toolbar>
       <Toolbar
