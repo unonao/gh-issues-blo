@@ -4,6 +4,9 @@ const nextConfig = {
     ? `/${process.env.GITHUB_REPOSITORY.split("/")[1]}`
     : "",
   reactStrictMode: true,
+  env: {
+    title: "LAIME",
+  },
 };
 
 module.exports = nextConfig;
