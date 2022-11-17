@@ -7,6 +7,9 @@ const nextConfig = {
   env: {
     title: "LAIME",
   },
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;
