@@ -1,8 +1,8 @@
 import * as React from "react";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Link from "next/link";
-
+import Link from "@mui/material/Link";
+import NextLink from "next/link";
 import Logo from "./Logo";
 
 interface HeaderProps {
@@ -35,7 +35,15 @@ export default function Header(props: HeaderProps) {
         sx={{ justifyContent: "space-between", overflowX: "auto" }}
       >
         {sections.map((section) => (
-          <Link key={section.title} href={section.url}>
+          <Link
+            component={NextLink}
+            color="inherit"
+            noWrap
+            key={section.title}
+            variant="body2"
+            href={section.url}
+            sx={{ p: 1, flexShrink: 0 }}
+          >
             {section.title}
           </Link>
         ))}

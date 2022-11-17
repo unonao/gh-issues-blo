@@ -14,6 +14,7 @@ const nextConfig = {
     unoptimized: true,
     path: `${basePath}/_next/image`,
   },
+  serverRuntimeConfig: { basePath },
 };
 
 module.exports = nextConfig;

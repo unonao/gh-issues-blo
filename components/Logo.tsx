@@ -1,6 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
-
+import { makeImagePath } from "../lib/imagePath";
 interface LogoProps {
   width?: number;
   height?: number;
@@ -9,10 +9,9 @@ interface LogoProps {
 export default function Logo({ width = 240, height = 80 }: LogoProps) {
   return (
     <Image
-      src="/logo.png"
+      src={makeImagePath("logo.png")}
       width={width}
       height={height}
-      objectFit="contain"
       alt="logo"
     />
   );
