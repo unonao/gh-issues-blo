@@ -6,5 +6,5 @@ export function makeImagePath(imgPath: string) {
   const basePath = serverRuntimeConfig.basePath
     ? serverRuntimeConfig.basePath
     : "";
-  return path.join(basePath, imgPath);
+  return path.join("/", basePath, imgPath);
 }

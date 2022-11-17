@@ -1,5 +1,5 @@
-//import "../styles/globals.scss";
-//import "../styles/markdown.scss";
+import "../styles/globals.scss";
+import "../styles/markdown.scss";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import Layout from "../components/Layout";

@@ -1,6 +1,6 @@
 import * as React from "react";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import NextLink from "next/link";
 import Logo from "./Logo";
@@ -10,24 +10,22 @@ interface HeaderProps {
     title: string;
     url: string;
   }>;
-  title?: string;
 }
 
 export default function Header(props: HeaderProps) {
-  const { sections, title } = props;
+  const { sections } = props;
   return (
     <React.Fragment>
-      <Toolbar sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Typography
-          component="h2"
-          variant="h5"
-          color="inherit"
-          align="center"
-          noWrap
-          sx={{ flex: 1 }}
+      <Toolbar
+        sx={{ borderBottom: 1, borderColor: "divider", alignContent: "center" }}
+      >
+        <Box
+          sx={{
+            margin: "auto",
+          }}
         >
-          {title ? title : <Logo />}
-        </Typography>
+          <Logo />
+        </Box>
       </Toolbar>
       <Toolbar
         component="nav"

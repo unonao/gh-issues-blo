@@ -39,7 +39,6 @@
     color: #666;
     font-size: 0.9rem;
     text-align: center;
-
     @apply dark:text-gray-300;
   }
 
@@ -74,8 +73,6 @@
     font-size: 0.8rem;
     background-color: #eee;
     padding: 0.2rem 0.4rem;
-
-    @apply dark:bg-gray-800;
   }
 
   pre code {
