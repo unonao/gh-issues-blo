@@ -20,7 +20,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <Container maxWidth="lg">
         <Header sections={sections} />
         <main>
-          <Grid container spacing={5} sx={{ mt: 3 }}>
+          <Grid container spacing={4} sx={{ mt: 3 }}>
             <Grid item xs={12} md={8}>
               {children}
             </Grid>
