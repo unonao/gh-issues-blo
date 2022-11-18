@@ -9,7 +9,7 @@ const siteTitle = process.env.title ? process.env.title : "LAIME";
 
 const sections = [
   { title: "トップ", url: "/" },
-  { title: "記事一覧", url: "/articles" },
+  { title: "記事一覧", url: "/pages/1" },
   { title: "活動内容", url: "/about" },
   { title: "連絡先・入会申し込み", url: "/contact" },
 ];
